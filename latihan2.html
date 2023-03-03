@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Kalkulator Sederhana By Rayhan</title>
+        <script language="Javascript"></script>
+    </head>
+    <script language="Javascript">
+        function math(operation) {
+            var bil1=document.return.bil1.value;
+            var bil2=document.return.bil2.value;
+            switch (operation) {
+                case '+': document.return.result.value = Number(bil1)+Number(bil2);
+                    break;
+                case '-': document.return.result.value = bil1-bil2;
+                    break;
+                case 'x': document.return.result.value = bil1*bil2;
+                    break;
+                case '/': document.return.result.value = bil1/bil2;
+                    break;
+                default: document.return.output.value = "Input tidak valid";
+                    break;
+            }
+        }
+    </script>
+    <body>
+    <form method="POST" name="return">
+        <p>Bilangan 1 <input type="text" name="bil1"></p>
+        <p>Bilangan 2 <input type="text" name="bil2"></p>
+        <p>Hasil <input type="text" name="result"></p>
+        <p>
+            <input type="button" name="operation" value="+" onclick="math(this.value)">
+            <input type="button" name="operation" value="-" onclick="math(this.value)">
+            <input type="button" name="operation" value="x" onclick="math(this.value)">
+            <input type="button" name="operation" value="/" onclick="math(this.value)">
+        </p>
+    </form>
+    </body>
+</html>
